@@ -26,9 +26,8 @@ declare type LoginUser = {
 };
 
 declare type User = {
-  $id: string;
+  id: string;
   email: string;
-  userId: string;
   dwollaCustomerUrl: string;
   dwollaCustomerId: string;
   firstName: string;
@@ -36,7 +35,6 @@ declare type User = {
   name: string;
   address1: string;
   city: string;
-  state: string;
   postalCode: string;
   dateOfBirth: string;
   ssn: string;
@@ -83,12 +81,9 @@ declare type Transaction = {
 };
 
 declare type Bank = {
-  $id: string;
-  accountId: string;
-  bankId: string;
+  id: string;
   accessToken: string;
   fundingSourceUrl: string;
-  userId: string;
   shareableId: string;
 };
 
@@ -310,9 +305,9 @@ declare interface exchangePublicTokenProps {
 
 declare interface createBankAccountProps {
   accessToken: string;
-  userId: string;
-  accountId: string;
   bankId: string;
+  accountId: string;
+  userId: string;
   fundingSourceUrl: string;
   shareableId: string;
 }
